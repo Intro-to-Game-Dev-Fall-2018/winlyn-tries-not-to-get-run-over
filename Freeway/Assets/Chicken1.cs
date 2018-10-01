@@ -9,23 +9,22 @@ public class Chicken1 : MonoBehaviour
 	public float speed;
 	public Text countText1;
 	
-	private Rigidbody2D rb2d;
-	private int count1;	
+	private int count1;
+	private int y;
 	
 	// Use this for initialization
 	void Start()
 	{
-		rb2d = GetComponent<Rigidbody2D>();
 		count1 = 0;
 		SetCountText1();
+		
 	}
 
 	// Update is called once per frame
 	void FixedUpdate()
 	{
 		float moveVertical1 = Input.GetAxis("Vertical1");
-		Vector2 movement = new Vector2(0.0f, moveVertical1);
-		rb2d.AddForce(movement * speed);
+		transform.Translate(0, moveVertical1 * speed * Time.deltaTime, 0);
 	}
 
 	void OnCollisionEnter2D(Collision2D collisionInfo)
@@ -34,11 +33,11 @@ public class Chicken1 : MonoBehaviour
 		{
 			count1 = count1 + 1;
 			SetCountText1();
-			transform.position = new Vector2(-4.15f, -7.15f);
+			transform.position = new Vector2(-4.15f, -5.76f);
 		}
 		if (collisionInfo.gameObject.tag == "Car")
 		{
-			transform.position = new Vector2(-4.15f, -7.15f);
+			transform.position = new Vector2(4.15f, -7.15f);
 		}
 	}
 

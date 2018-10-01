@@ -25,11 +25,11 @@ public class CarMovement : MonoBehaviour {
 	{
 		if (collisionInfo.gameObject.tag == "Left")
 		{
-			transform.position = new Vector2(12.5f, y);
+			transform.position = new Vector2(10.5f, y);
 		}
 		if (collisionInfo.gameObject.tag == "Right")
 		{
-			transform.position = new Vector2(-12.5f, y);
+			transform.position = new Vector2(-10.5f, y);
 		}
 	}
 }
