@@ -8,6 +8,8 @@ TagManager:
   - Left
   - Right
   - Car
+  - Score1
+  - Score2
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@ public class Chicken2 : MonoBehaviour
 	public float speed;
 	public Text countText2;
 
-	private int count2;
+	public int count2;
 
 	// Use this for initialization
 	void Start()
@@ -35,7 +35,8 @@ public class Chicken2 : MonoBehaviour
 		}
 		if (collisionInfo.gameObject.tag == "Car")
 		{
-		transform.position = new Vector2(4.15f, -7.15f);
+		transform.position = new Vector2(4.15f, -5.76f);
+		FindObjectOfType<Audio>().Play("chiknscrem");
 		}
 	}
 
