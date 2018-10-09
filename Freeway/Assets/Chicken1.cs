@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Chicken1 : MonoBehaviour
 {
 
 	public float speed;
 	public Text countText1;
-	
+
 	public int count1;
 	
 	// Use this for initialization
@@ -39,6 +41,11 @@ public class Chicken1 : MonoBehaviour
 			transform.position = new Vector2(-4.15f, -5.765f);
 			FindObjectOfType<Audio>().Play("chiknscrem");
 
+		}
+
+		if (count1 <= 10)
+		{
+			
 		}
 	}
 
